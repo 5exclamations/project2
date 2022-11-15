@@ -1,7 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 @media screen and (min-width: 1080px) and (max-width: 2560px){
     .main{
-        height: 30%;
+        display: block;
+        position: absolute;
+        top: 50%;
+        box-sizing: border-box;
+        width: 336px;
+        height: 246px;
+        left: 408px;
+        top: 232px;
+        border: 1px solid #C4C4C4;
+        border-radius: 10px;
+        margin: auto;
+    }
+    .addButton{
         display: flex;
-        top: 33%;
+        width: 150px;
+        height: 42px;
+        background: #9953F1;
+        border-radius: 71px;
+        margin-top: 18px;
+        margin-left: 92px;
+    }
+    .yellowDiv{
+        width: 336px;
+        height: 28px;
+        left: 408px;
+        top: 232px;
+        background: #FFDC40;
+    }
+    .inp{
+        display: flex;
+        box-sizing: border-box;
+        width: 286px;
+        height: 40px;
+        left: 436px;
+        top: 349px;
+        border: 1px solid #C4C4C4;
+        border-radius: 10px;
+        margin-left: 28px;
+    }
+    .plus{
+        margin: 0;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        background: #AA68FE;
+        border-radius: 71px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+    .down{
+        width: 25px;
+        height: 23px;
+        margin-left: 280px;
+        margin-top: -25px;
+    }
+    .addText{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding-left: 10px;
+    }
+    .todoText{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 30px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    .xpic{
+        display: flex;
+        height: 30px;
+        width: 35px;
+        margin-left: 243px;
+        margin-top: -200px;
+        align-self: flex-end;
     }
 }
