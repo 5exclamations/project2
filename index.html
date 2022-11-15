@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <title>To-Do List</title>
     <link rel = "stylesheet" href = "./style.css">
+    <script defer src = "script.js"></script>
 </head> 
 <body>
     <div class = 'main'>
         <div class="yellowDiv"></div>
         <p class="todoText"> To-Do List</p>
-        <img src = "down.png" alt = "down" class="down">
+        <button class="sortButton"><img src = "images/down.svg" alt = "down" class="down"></button>
         <div class="inp">
-            <img src="xpic.png" alt="xpic" class="xpic">
+            <input type = 'text'>
+            <button class="xpicButton"> <img src="images/xpic.svg" alt="xpic" class="xpic"></button>
         </div>
+        <button class="buttonAdd">
         <div class="addButton">
             <p class="plus">+</p>
             <p class="addText"> Добавить</p>    
         </div>
+    </button>
     </div>
 </body> 
 </html>
