@@ -23,6 +23,10 @@
     }
     .listofText{
         margin-left: 30px;
+        border: 1px solid #C4C4C4;
+        border-radius: 10px;
+        width: 283px;
+        min-height: 40px;
     }
     .yellowDiv{
         width: 335px;
@@ -41,8 +45,20 @@
         top: 349px;
         border: 1px solid #C4C4C4;
         border-radius: 10px;
-        margin-left: 28px;
+        /* margin-left: 28px; */
         flex-direction: row;
+        margin-bottom: 5px;
+    }
+    .inputText{
+        position:absolute;
+        background: 0;
+        width: 286px;
+        padding-left: 10px;
+        margin-left: -1px;
+        /* margin: 0; */
+        margin-top: -1px;
+        height: 40px;
+        border-radius: 10px;
     }
     .plus{
         margin: 0;
@@ -84,6 +100,13 @@
     }
     .xpic{
         display: flex;  
+        position: absolute;
+        margin-left: 180px;
+        margin-top: -5px;
+    }
+    .xpic:hover{
+        background-color: blueviolet;
+        border-radius: 50%;
     }
     .sortButton{
         margin-left: 280px;
@@ -93,6 +116,8 @@
         height: 30px;
         margin-top: 0px;
         margin-left: 5px;
+        padding-left: 50px;
+        cursor: move;
     }
     .xpicButton{
         margin-left: 65px;
