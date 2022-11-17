@@ -1,45 +1,79 @@
-let text = document.querySelector('.inputText');
-let listed = document.querySelector('.listofText')
-let dellll = document.querySelector('.xpic')
+let text = document.querySelectorAll('.inputText');
+let read = document.querySelectorAll('.readOnly')
+let listed = document.querySelector('.listofText');
 let addButtonScript = document.querySelector('.buttonAdd');
-let xpicButtonScript = document.querySelector('.xpicButton');
 let sortButtonScript = document.querySelector('.sortButton');
+let delList = document.getElementById('deleteButton');
+let inputListFirst = document.getElementById('divof2Elem');
+let downImage = document.querySelector('.sortButton');
+let upImage = document.querySelector('.up');
+let i = 0;
+let k = 0;
+let j = 0;
+
 addButtonScript.addEventListener('click',(event)=>{
-    var createdElement = document.createElement('p');
-    createdElement.classList.add('input');
-    createdElement.setAttribute("dragable", "true")
-    createdElement.innerHTML = `<input class="inputText" name="TextDraw" type = 'text'>
-    <button class="xpicButton"> <img src="images/xpic.svg" alt="xpic" class="xpic"></button>
-    `;
-    listed.appendChild(createdElement);
-    event.preventDefault();
-    
-}) ;
-text.addEventListener('keydown', (event) => {
-    if (event.keyCode === 13) {
-      text.setAttribute("readonly", "readonly")
+            i++;
+            let createdDiv = document.createElement('div');
+            let createdElement = document.createElement('div');
+            let inputChild = document.createElement('input');
+            inputChild.classList.add('inputText');
+            createdElement.classList.add('input');
+            createdElement.classList.add('readOnly');
+            createdDiv.classList.add('newDiv');
+            createdElement.innerHTML = `<button class="xpicButton"> <img src="images/xpic.svg" alt="xpic" class="xpic"></button>`;
+            createdDiv.appendChild(inputChild);
+            createdDiv.appendChild(createdElement);
+            listed.appendChild(createdDiv);
+            event.preventDefault();
+            createdDiv.setAttribute("draggable", "true");
+        delList.addEventListener('click', ()=>{
+            function removeInput(event) {
+                if(i>0 && k ==0){
+                event.remove();
+                i--;
+                k++               }
+            else if (text.innerText != ' '){
+                text.innerText = ' '
+            }                }
+                removeInput(inputListFirst);                })
+
+            function readOnl(){
+                inputChild.addEventListener('keydown', (event) => {
+                    if (event.keyCode === 13) {
+                    inputChild.setAttribute("readonly", "true");
+                    }                }                );           }
+
+                    readOnl(createdElement);   
+
+                    createdElement.addEventListener('click', () =>{
+            function removeInput(event) {
+                    if(i>0){
+                    event.remove();
+                    i--;
+                    }           }
+                    removeInput(createdDiv);
+})}) ;
+
+function readOnl(eventt){
+    eventt.addEventListener('keydown', (event) => {
+        if (event.keyCode === 13) {
+          eventt.setAttribute("readonly", "true");
+        }
     }
+    );
 }
-);
-
-xpicButtonScript.addEventListener('click',(event)=>{
-    listed.removeChild(listed.firstChild);
+read.forEach((element) => {
+    readOnl(element);
 })
-const yay = document.querySelector('#yay');
-removeAllChildNodes(yay);
 
+    sortButtonScript.addEventListener('click', (event)=>{
+            j++;
+            if(j%2==0)
+            downImage.innerHTML= '<img src = "images/up.svg" alt = "up" class="up"></img>';
+            else downImage.innerHTML= '<img src = "images/down.svg" alt = "down" class="down">'
+    })
 
-
-const deleteButton = document.createElement('delete-element');
-deleteButton.id = 'delete-element';
-
-const deleteImage = document.createElement('im');
-deleteImage.src = "images/xpic.svg";
-deleteButton.appendChild(deleteImage);
-listed.appendChild(deleteButton);
-
-deleteButton.addEventListener('click', () => {
-    const parent = deleteButton.parentElement;
-    console.log('frwds');
-    parent.parentElement.removeChild(parent);
+    new Sortable(document.querySelector('.listofText'),
+{
+    animation: 200
 })

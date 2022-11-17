@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
     .main{
-        display: block;
         position: absolute;
         top: 50%;
         box-sizing: border-box;
@@ -11,7 +10,10 @@
         top: 232px;
         border: 1px solid #C4C4C4;
         border-radius: 10px;
-        margin: auto;
+    }
+    .forScroll{
+        max-height: 200px;
+        overflow-y: auto;
     }
     .addButton{
         display: flex;
@@ -36,29 +38,14 @@
         border-top-left-radius: 9px;
         border-top-right-radius: 9px;
     }
-    .inp{
-        display: flex;
-        box-sizing: border-box;
-        width: 286px;
-        height: 40px;
-        left: 436px;
-        top: 349px;
-        border: 1px solid #C4C4C4;
-        border-radius: 10px;
-        /* margin-left: 28px; */
-        flex-direction: row;
-        margin-bottom: 5px;
-    }
     .inputText{
-        position:absolute;
-        background: 0;
-        width: 286px;
+        width: 239px;
         padding-left: 10px;
         margin-left: -1px;
-        /* margin: 0; */
         margin-top: -1px;
         height: 40px;
         border-radius: 10px;
+        background: 0;
     }
     .plus{
         margin: 0;
@@ -98,11 +85,8 @@
         text-align: center;
         text-transform: capitalize;
     }
-    .xpic{
-        display: flex;  
-        position: absolute;
-        margin-left: 180px;
-        margin-top: -5px;
+    .newDiv{
+        display: flex;
     }
     .xpic:hover{
         background-color: blueviolet;
@@ -114,13 +98,12 @@
     input{
         border: 0;
         height: 30px;
-        margin-top: 0px;
         margin-left: 5px;
-        padding-left: 50px;
         cursor: move;
     }
     .xpicButton{
-        margin-left: 65px;
+        margin-top: 5px;
+        width: 20px;
     }
     button{
         background: 0;
@@ -129,4 +112,8 @@
     .buttonAdd{
         margin-top: 18px;
         margin-left: 92px;
+    }
+    #divof2Elem{
+        height: 40px;
+        display: flex;
     }
