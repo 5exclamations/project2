@@ -6,7 +6,6 @@ let sortButtonScript = document.querySelector('.sortButton');
 let delList = document.getElementById('deleteButton');
 let inputListFirst = document.getElementById('divof2Elem');
 let downImage = document.querySelector('.sortButton');
-let upImage = document.querySelector('.up');
 let i = 0;
 let k = 0;
 let j = 0;
